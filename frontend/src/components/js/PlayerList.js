@@ -9,7 +9,7 @@ const PlayerList = ()=>{
     const [Players,setPlayers] = useState([])
 
     useEffect(()=>{
-        axios.get("http://localhost:2000/players"
+        axios.get("http://localhost:2000/players" ,"https://fifa-backend-yh2u.onrender.com/players"
         ).then((res)=>{
             setPlayers(res.data);
             console.log(res)
