@@ -17,7 +17,7 @@ const NewPlayer = ()=>{
     
     let handleSubmit = (element)=>{
         element.preventDefault("");
-        axios.post("http://localhost:2000/players/addPlayer",{
+        axios.post("https://fifa-backend-yh2u.onrender.com/players/addPlayer",{
             firstName : firstName,
             lastName : lastName,
             age : age,
