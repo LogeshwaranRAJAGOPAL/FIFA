@@ -1,0 +1,153 @@
+.card{
+    width: 100px;
+    height: 320px;
+}.card:hover{
+    transform: translateY(1rem);
+    cursor: pointer;
+    filter: brightness(1.5)
+}
+.background-img{
+    position: absolute;
+    width: 250px;
+    height: 320px;
+}
+.playerImg{
+    position: relative;
+    top:-15%;
+    left: 55%;
+    size: 100px;
+    width: 165px;
+    height: 180px;
+}
+.Name{
+    position: relative;
+    color: aliceblue;
+    font-size: larger;
+    width: 10rem;
+    top:40%;
+    left:50%
+}
+.position{
+    color: rgb(177, 215, 5);
+    top:18%;
+    left:38%;
+    font-size: larger;
+    font-weight: bolder;
+    position: relative;
+}
+.stats{
+    font-size: larger;
+    color: goldenrod;
+    position: relative;
+    width: 60rem;
+    top: -15%;
+    left: 75%;
+}
+body.active-modal {
+    overflow-y: hidden;
+}
+.update-butn{
+    color: aliceblue;
+    width: 9rem;
+    height: 3rem;
+    font-size: larger;
+    font-weight: bolder;
+    background:#0668e7;
+}.update-butn:hover{
+    color:#0668e7 ;
+    background:aliceblue;
+    filter: blur(0px);
+}
+.delete-butn{
+    color: aliceblue;
+    background: #e94e07;
+    width: 9rem;
+    font-size: larger;
+    font-weight: bolder;
+    height: 3rem;
+}.delete-butn:hover{
+    color: #e94e07;
+    background: aliceblue;
+    filter: blur(0px);
+}
+.optModal,.optOverlay{
+    width: 100vw;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index:1;
+    bottom: 0;
+    position: absolute;
+}
+.optOverlay{
+    background-color: rgba(75, 71, 71, 0.8);
+}
+.opt-modal-content{
+    position: fixed;
+    align-content: center;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.4;
+    background: #f1f1f1;
+    padding: 1rem;
+    border-radius: 2rem;
+    width: 27rem;
+}
+.close-modal-opt{
+    background-color: rgb(180, 41, 41);
+    color: antiquewhite;
+    font-size: larger;
+    font-weight: bolder;
+    position: fixed;
+    height: 3rem;
+    width: 9rem;
+    padding: 5px 7px;
+}.close-modal-opt:hover{
+    cursor: pointer;
+    filter: blur(0px);
+    background-color:antiquewhite;
+    color:  rgb(180, 41, 41);
+}
+.updateModal , .updateOverlay{
+    width: 100vw;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index:1;
+    bottom: 0;
+    position: absolute;
+}
+.updateOverlay{
+    background-color: rgba(75, 71, 71, 0.8);
+}
+.Ucontent{
+    position: absolute;
+    align-content: center;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.4;
+    padding: 14px 28px;
+    border-radius: 3px;
+    max-width: 600px;
+    min-width: 300px;
+}
+.close-modal-update{
+    background-color: rgb(180, 41, 41);
+    color: antiquewhite;
+    font-size: larger;
+    font-weight: bolder;
+    position: fixed;
+    top: 18%;
+    right: 38%;
+    width: 2rem;
+    padding: 5px 7px;
+}.close-modal-update:hover{
+    cursor: pointer;
+    filter: blur(0px);
+    background-color:antiquewhite;
+    color:  rgb(180, 41, 41);
+}

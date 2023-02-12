@@ -1,0 +1,123 @@
+
+.main{
+  background-image: url('https://rare-gallery.com/mocahbig/392957-fifa-22-football-game-mbappe-4k-pc-wallpaper.jpg'); 
+  background-repeat:repeat-y; 
+  background-size: cover; 
+  height: 100vh;
+}
+body.active-modal {
+  overflow-y: hidden;
+}
+.players-btn{
+  position: absolute;
+  top:5%;
+  left:5%;
+}
+.add-player-btn{
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+.ButtonMessage-players{
+  position: absolute;
+  top: 4%;
+  left: 10%
+}
+.ButtonMessage-player{
+  position: absolute;
+  top: 9%;
+  left: 15%;
+}
+
+.btn-modal {
+  padding: 10px 20px;
+  display: block;
+  margin: 100px auto 0;
+  font-size: 18px;
+}
+
+.modal, .overlay {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+}
+
+.player-modal, .overlay-players {
+  width: 100vw;
+  height: fit-content;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.overlay-players{
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.modal-content {
+  position: absolute;
+  align-content: center;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1.4;
+  background: #f1f1f1;
+  padding: 14px 28px;
+  border-radius: 3px;
+  max-width: 600px;
+  min-width: 300px;
+}
+
+.close-modal {
+  background-color: rgb(180, 41, 41);
+  color: antiquewhite;
+  font-size: larger;
+  font-weight: bolder;
+  position: absolute;
+  top: 15%;
+  right: 40%;
+  width: 2rem;
+  padding: 5px 7px;
+}.close-modal:hover{
+  filter: blur(0px);
+  color: rgb(180, 41, 41);
+  background-color: rgb(187, 140, 140);
+}
+.close-modal-players{
+  background-color: rgb(180, 41, 41);
+  color: antiquewhite;
+  font-size: larger;
+  font-weight: bolder;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 6rem;
+  padding: 5px 7px;
+}.close-modal-players:hover{
+  filter: blur(0px);
+  color: rgb(180, 41, 41);
+  background-color: rgb(187, 140, 140);
+}
+.Button{
+  position:absolute;
+  top:538px;
+}
+img{
+  width:4rem;
+  height:4rem;
+}
+button{
+  border: none;
+  background: none;
+  border-radius: 7rem;
+}button:hover{
+  filter: blur(2px);
+}

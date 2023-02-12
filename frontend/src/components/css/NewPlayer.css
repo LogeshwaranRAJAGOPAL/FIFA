@@ -1,0 +1,61 @@
+
+form{
+    position: absolute;
+    top: 16%;
+    left: 33%;
+    box-sizing: border-box;
+    background-image: url('https://e1.pxfuel.com/desktop-wallpaper/152/907/desktop-wallpaper-fifa-16-messi-pes-mobile.jpg');
+    background-size: cover;
+    text-align: center;
+    padding: 3rem;
+    margin: 0;
+    border-radius: 5rem;
+}
+
+input , select , .submit-button{
+    font-size: large;
+    display: block;
+    width: 20rem;
+    height: 2rem;
+    margin: 1rem;
+    opacity: 0.3;
+    border-radius: 1rem;
+}:focus{
+    opacity: 1;
+    cursor: pointer;
+}
+input:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+select{
+    width: 20.5rem;
+    height: 2rem;
+}
+select:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.submit-button{
+    opacity: 1;
+    background-color: rgb(39, 127, 227);
+    border: none;
+    width: 20.5rem;
+}.submit-button:hover{
+    cursor: pointer;
+    background-color: aliceblue;
+}
+.neg{
+    width: 20rem;
+    height: auto;
+    color: rgb(209, 14, 14);
+    font-size: large;
+    font-weight: bold;
+}
+.pos{
+    color: rgb(8, 109, 8);
+    font-size: large;
+    font-weight: bold;
+}
