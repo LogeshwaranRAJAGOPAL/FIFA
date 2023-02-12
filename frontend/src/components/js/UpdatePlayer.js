@@ -19,7 +19,7 @@ const UpdatePlayer = (props)=>{
     
     let handleSubmit = (element)=>{
         element.preventDefault("");
-        axios.put(`http://localhost:2000/players/updatePlayer/${player._id}`,{
+        axios.put(`https://fifa-backend-yh2u.onrender.com/players/updatePlayer/${player._id}`,{
             firstName : firstName,
             lastName : lastName,
             age : age,
