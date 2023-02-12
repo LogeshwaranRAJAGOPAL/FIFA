@@ -16,7 +16,7 @@ const PlayerCard = (props)=>{
         setUpdate(!updatePlayer)
     }
     const Handledelete = ()=>{
-            axios.delete(`http://localhost:2000/players/deletePlayer/${player._id}`
+            axios.delete(`https://fifa-backend-yh2u.onrender.com/players/deletePlayer/${player._id}`
             ).then((res)=>{
                 setResponse("Player Removed Successfully")
                 console.log(res)
