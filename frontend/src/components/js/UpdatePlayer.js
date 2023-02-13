@@ -57,46 +57,46 @@ const UpdatePlayer = (props)=>{
 
     const handleChange1 =  (element)=>{
         setFirstName(element.target.value);
-        setState(true);
+        setState(false);
     }
     const handleChange2 =  (element)=>{
         setLastName(element.target.value);
-        setState(true);
+        setState(false);
     }
 
     const handleChange3 =  (element)=>{
         setCommonName(element.target.value);
-        setState(true);
+        setState(false);
     }
 
     const handleChange4 =  (element)=>{
         setAge(element.target.value);
-        setState(true);
+        setState(false);
     }
 
     const handleChange5 =  (element)=>{
         setSpeed(element.target.value);
-        setState(true);
+        setState(false);
     }
 
     const handleChange6 =  (element)=>{
         setSkills(element.target.value);
-        setState(true);
+        setState(false);
     }
 
     const handleChange7 =  (element)=>{
         setAgility(element.target.value);
-        setState(true);
+        setState(false);
     }
 
     const handleChange8 =  (element)=>{
         setPosition(element.target.value);
-        setState(true);
+        setState(false);
     }
 
     const handleChange9 =  (element)=>{
         setImageOfplayer(element.target.value);
-        setState(true);
+        setState(false);
     }
 
 
