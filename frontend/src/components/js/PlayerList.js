@@ -8,7 +8,7 @@ import { Grid } from '@mui/material';
 const PlayerList = ()=>{
     const [Players,setPlayers] = useState([])
 
-    useEffect(()=>{
+    let PlayersCall = ()=>{
         axios.get("https://fifa-backend-yh2u.onrender.com/players"
         ).then((res)=>{
             setPlayers(res.data);
@@ -16,9 +16,10 @@ const PlayerList = ()=>{
         },[]).catch((err)=>{
             console.log(err)
         })
-    },[])
+    }
     return(
         <div className='pageBG'>
+        {PlayersCall()}
             <Grid container spacing={12}>
                 {Players.map(player =>
                     <Grid className='playerItem' item xs={3}>
