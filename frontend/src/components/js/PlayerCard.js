@@ -2,6 +2,7 @@ import React ,{useState} from "react";
 import "../css/PlayerCard.css"
 import UpdatePlayer from "./UpdatePlayer";
 import axios from "axios";
+import Card from "../images/playerCard.png"
 
 const PlayerCard = (props)=>{
     const {player} = props;
@@ -29,7 +30,7 @@ const PlayerCard = (props)=>{
     return(
         <div>
         <div onClick={toggle} className="card">
-            <img  className="background-img" src="https://pbs.twimg.com/media/EjQO_CCWAAA6YC7.png" alt="card-img"></img>
+            <img  className="background-img" src={Card} alt="card-img"></img>
             <div  className="position">{player.overAll}  <br/> {player.position}</div>
             <div  className="Name" >{player.commonName}</div>
             <img  className="playerImg" src={player.imageOfplayer} alt="playerimage"/>
