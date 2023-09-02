@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import '../css/UpdatePlayer.css'
+import { CircularProgress } from '@mui/material';
 
 const UpdatePlayer = (props)=>{
     const {player} = props;
@@ -16,9 +17,11 @@ const UpdatePlayer = (props)=>{
     const[message,setMessage]=useState(null);
     const[errMessage,setErrMessage]=useState(null);
     const [state,setState]=useState(true);
-    
+    const [load,setLoad] = useState(false);
+
     let handleSubmit = (element)=>{
         element.preventDefault("");
+        setLoad(true)
         axios.put(`https://fifa-backend-yh2u.onrender.com/players/updatePlayer/${player._id}`,{
             firstName : firstName,
             lastName : lastName,
@@ -40,6 +43,7 @@ const UpdatePlayer = (props)=>{
             setImageOfplayer(player.imageOfplayer)
             setPosition(player.position)
             setMessage("Player Updated Succesfully 😀")
+            setLoad(false)
             }
         ).catch(err =>{
             setFirstName("")
@@ -52,6 +56,7 @@ const UpdatePlayer = (props)=>{
             setImageOfplayer("")
             setPosition("")
             setErrMessage("Error Updating the Player enter proper values😢"+ err.message)
+            setLoad(false)
         })
     }
 
@@ -104,7 +109,7 @@ const UpdatePlayer = (props)=>{
     return(
         <form onSubmit={handleSubmit} className="form-update">
             <h2>Update Player</h2>
-            {message ? <p className='pos' >{message}</p>: errMessage ? <p className='neg' >{errMessage}</p> : null}
+            {load ? <CircularProgress color='success'/> : message ? <p className='pos' >{message}</p>: errMessage ? <p className='neg' >{errMessage}</p> : null}
             <input placeholder={player.firstName} name='firstName' value={firstName} onChange={handleChange1} type="text" />
             <input placeholder={player.lastName} name='lastName'  value={lastName} onChange={handleChange2} type="text" />
             <input placeholder={player.commonName} name='commonName'  value={commonName} onChange={handleChange3} type="text" />
