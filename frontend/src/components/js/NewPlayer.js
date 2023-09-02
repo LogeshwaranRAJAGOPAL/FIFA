@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import '../css/NewPlayer.css'
+import { CircularProgress } from '@mui/material';
 
 const NewPlayer = ()=>{
     const[firstName,setFirstName] = useState("");
@@ -14,9 +15,11 @@ const NewPlayer = ()=>{
     const[imageOfplayer,setImageOfplayer]=useState("");
     const[message,setMessage]=useState(null);
     const[errMessage,setErrMessage]=useState(null);
+    const [load,setLoad] = useState(false);
     
     let handleSubmit = (element)=>{
         element.preventDefault("");
+        setLoad(true)
         axios.post("https://fifa-backend-yh2u.onrender.com/players/addPlayer",{
             firstName : firstName,
             lastName : lastName,
@@ -38,6 +41,7 @@ const NewPlayer = ()=>{
             setImageOfplayer("")
             setPosition("")
             setMessage("Player Created Succesfully 😀")
+            setLoad(false)
             }
         ).catch(err =>{
             setFirstName("")
@@ -50,6 +54,7 @@ const NewPlayer = ()=>{
             setImageOfplayer("")
             setPosition("")
             setErrMessage("Error Creating the Player 😢")
+            setLoad(false)
         })
     }
 
@@ -92,7 +97,7 @@ const NewPlayer = ()=>{
     
     return(
         <form onSubmit={handleSubmit} >
-            {message ? <p className='pos' >{message}</p>: errMessage ? <p className='neg' >{errMessage}</p> : null}
+            {load ? <CircularProgress color='success'/>:message ? <p className='pos' >{message}</p>: errMessage ? <p className='neg' >{errMessage}</p> :  null}
             <input placeholder='Player First Name' name='firstName' value={firstName} onChange={handleChange1} type="text" />
             <input placeholder='Player Last Name' name='lastName'  value={lastName} onChange={handleChange2} type="text" />
             <input placeholder='Player Common Name' name='commonName'  value={commonName} onChange={handleChange3} type="text" />
