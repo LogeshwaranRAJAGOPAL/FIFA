@@ -15,7 +15,6 @@ const PlayerList = ()=>{
         ).then((res)=>{
             setPlayers(res.data);
             setLoader(false);
-            console.log(res)
         },[]).catch((err)=>{
             console.log(err)
         })

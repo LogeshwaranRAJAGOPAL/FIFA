@@ -41,15 +41,20 @@ function App() {
             <div className='modal'>
               <div className='overlay'>
                 <div className='model-content'>
-                <NewPlayer/>
+                <NewPlayer setModal={setModal}/>
                 <button className='close-modal' onClick={popUpForm}>X</button>
                 </div>
               </div>
             </div>
           }
+        
           {players && 
               <div className='player-modal'>
                 <div className='overlay-players'>
+                 {
+                  PlayerList == null &&
+                        <div>Loading....</div>
+                  }
                   <button className='close-modal-players' onClick={popPlayers}>Close X</button>
                   <PlayerList/>
                 </div> 

@@ -3,7 +3,7 @@ import axios from 'axios';
 import '../css/NewPlayer.css'
 import { CircularProgress } from '@mui/material';
 
-const NewPlayer = ()=>{
+const NewPlayer = ({setModal})=>{
     const[firstName,setFirstName] = useState("");
     const[lastName,setLastName] = useState("");
     const[commonName,setCommonName] = useState("");
@@ -42,6 +42,7 @@ const NewPlayer = ()=>{
             setPosition("")
             setMessage("Player Created Succesfully 😀")
             setLoad(false)
+            setModal(false)
             }
         ).catch(err =>{
             setFirstName("")
@@ -53,7 +54,7 @@ const NewPlayer = ()=>{
             setAgility("")
             setImageOfplayer("")
             setPosition("")
-            setErrMessage("Error Creating the Player 😢")
+            setErrMessage("Error Creating the Player , Close and Try Again😢")
             setLoad(false)
         })
     }
