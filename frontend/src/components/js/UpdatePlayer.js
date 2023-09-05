@@ -3,8 +3,7 @@ import axios from 'axios';
 import '../css/UpdatePlayer.css'
 import { CircularProgress } from '@mui/material';
 
-const UpdatePlayer = (props)=>{
-    const {player} = props;
+const UpdatePlayer = ({player ,setUpdate ,setOpt })=>{
     const[firstName,setFirstName] = useState(player.firstName);
     const[lastName,setLastName] = useState(player.lastName);
     const[commonName,setCommonName] = useState(player.commonName);
@@ -44,6 +43,8 @@ const UpdatePlayer = (props)=>{
             setPosition(player.position)
             setMessage("Player Updated Succesfully 😀")
             setLoad(false)
+            setUpdate(false)
+            setOpt(false)
             }
         ).catch(err =>{
             setFirstName("")
@@ -57,6 +58,8 @@ const UpdatePlayer = (props)=>{
             setPosition("")
             setErrMessage("Error Updating the Player enter proper values😢"+ err.message)
             setLoad(false)
+            setUpdate(false)
+            setOpt(false)
         })
     }
 
