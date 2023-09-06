@@ -148,7 +148,10 @@ const PlayerCard = ({ player , setFlag })=>{
                                <div className="updateOverlay">
                   
                                    <button className='close-modal-update' onClick={toggleUpdate}>X</button>
+
                                    <UpdatePlayer player={player} setUpdate={setUpdate} setOpt={setOpt} setFlag={setFlag}/>
+
+
                           
                                </div>
                              </div>}                 

@@ -3,6 +3,7 @@ import axios from 'axios';
 import '../css/UpdatePlayer.css'
 import { CircularProgress } from '@mui/material';
 
+
 const UpdatePlayer = ({player ,setUpdate ,setOpt, setFlag })=>{
     const[firstName,setFirstName] = useState(player.firstName);
     const[lastName,setLastName] = useState(player.lastName);
