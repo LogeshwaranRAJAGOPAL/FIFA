@@ -4,8 +4,7 @@ import UpdatePlayer from "./UpdatePlayer";
 import axios from "axios";
 import Card from "../images/playerCard.png"
 
-const PlayerCard = (props)=>{
-    const {player} = props;
+const PlayerCard = ({ player , setFlag })=>{
     const [updatePlayer,setUpdate] = useState(false)
     const [opt,setOpt] = useState(false)
     const [response,setResponse] = useState(null)
@@ -20,6 +19,7 @@ const PlayerCard = (props)=>{
             axios.delete(`https://fifa-backend-yh2u.onrender.com/players/deletePlayer/${player._id}`
             ).then((res)=>{
                 setResponse("Player Removed Successfully")
+                setFlag(true)
                 console.log(res)
             },[]).catch((err)=>{
                 setResponse("Error Removing the Player")
@@ -148,7 +148,7 @@ const PlayerCard = (props)=>{
                                <div className="updateOverlay">
                   
                                    <button className='close-modal-update' onClick={toggleUpdate}>X</button>
-                                   <UpdatePlayer player={player} setUpdate={setUpdate} setOpt={setOpt} />
+                                   <UpdatePlayer player={player} setUpdate={setUpdate} setOpt={setOpt} setFlag={setFlag}/>
                           
                                </div>
                              </div>}                 
